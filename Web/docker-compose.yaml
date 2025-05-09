@@ -3,7 +3,7 @@ networks:
     driver: bridge
 services:
   mongodb:
-    image: mongo
+    image: mongodb:v1
     container_name: mongodb
     networks:
      - roboshop
