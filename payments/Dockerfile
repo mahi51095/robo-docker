@@ -6,7 +6,7 @@ COPY requirements.txt /app/
 RUN pip install -r requirements.txt
 COPY *.py /app/
 COPY payment.ini /app/
-ENV AMQ_USER=roboshop
+ENV AMQ_USER=roboshop \
     AMQ_PASS=roboshop123
 #CMD ["python", "payment.py"]
 CMD ["uwsgi", "--ini", "payment.ini"]
